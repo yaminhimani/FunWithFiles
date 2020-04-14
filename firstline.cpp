@@ -23,7 +23,7 @@ int main(int argc, char* argv[]) {
 
 
 
-    if (fd == -1) {
+    if (fd == -1) {  //checks to see if file can be opened
         perror("error opening");
         return 2;
     }
@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
 
     while ((n = read(fd, buf, BUFFSIZE)) > 0 && count>=0) {
 
-        if(buf[0]=='\n'){
+        if(buf[0]=='\n'){ //if new line character is found count is set to negative 1 so file is not read anymore
             count=-1;
         }else{
             count++;
