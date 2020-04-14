@@ -28,16 +28,19 @@ int main(int argc, char* argv[]) {
         return 2;
     }
 
-    while((n = read(fd, buf, BUFFSIZE)) > 0) {
+    while(read(fd, buf, BUFFSIZE) > 0) {
         count++;
-        cout<<count<<endl;
+       // cout<<count<<endl;
         if(buf[0]=='\n'){
             count=count-1;
-            array.push_back(count);
+           array.push_back(count);
             count = 0;
-
         }
 
+
+
+
+      //  cout << *max_element(array.begin(), array.end()) << endl;
 
 
 //        if(write(STDOUT_FILENO, buf, n) != n) {
@@ -45,11 +48,20 @@ int main(int argc, char* argv[]) {
 //        }
         // cout << endl;
     }
+    array.push_back(count);
 
-    std::cout << "The vector elements are : ";
+ //   std::cout << "The vector elements are : ";
 
-    for(int i=0; i < array.size(); i++)
-        std::cout << array.at(i) << ' ';
+    int result=0;
+    for(int i=0; i < array.size(); i++){
+    //   cout << array.at(i) << ' ';
+        if(array.at(i)>result){
+            result=array.at(i);
+        }
+    }
+       cout<<result<<endl;
+
+
 }
 
 
