@@ -19,7 +19,7 @@ int main(int argc, char* argv[]) {
     char buf[BUFFSIZE];
     int fd;
     int count=0;
-    std::vector<int> array;
+    std::vector<int> array;  //int vector will store the number of characters per line in file
 
 
     fd = open(argv[1], O_RDONLY);
@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
 
     while(read(fd, buf, BUFFSIZE) > 0) {
         count++;
-       // cout<<count<<endl;
+
         if(buf[0]=='\n'){
             count=count-1;
            array.push_back(count);
@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
     int result=0;
     for(int i=0; i < array.size(); i++){
         if(array.at(i)>result){
-            result=array.at(i);
+            result=array.at(i);  //makes result the largest number of characters for a line in the file
         }
     }
        cout<<result<<endl;

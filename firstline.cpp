@@ -6,7 +6,7 @@
 
 using namespace std;
 
-#define BUFFSIZE 1
+#define BUFFSIZE 1 //so one character is read at a time in  the file
 
 int main(int argc, char* argv[]) {
 
