@@ -5,7 +5,14 @@ firstline- This program copies its input to output, up until the first newline c
 
 longestline- This program should write out the length of the longest line in the input (not including the newline characters which delimit a line).
 
+To Compile:
 
+g++ -o firstline firstline.cpp
 
+g++ -o longestline longestline.cpp
 
+To Run:
 
+./firstline (followed by file name)
+
+./longestline (followed by file name)
