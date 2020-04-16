@@ -1,5 +1,5 @@
 # FunWithFiles
-using only low level operations to perform simple tasks from files.
+using only low level operations to perform simple tasks by reading from files.
 
 firstline- This program copies its input to output, up until the first newline character found, if present, if not it should print until the end of the input.
 
