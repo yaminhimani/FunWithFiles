@@ -7,7 +7,7 @@
 
 using namespace std;
 
-#define BUFFSIZE 1
+#define BUFFSIZE 1 //reads one character at a time from the from the file
 
 int main(int argc, char* argv[]) {
     if(argc != 2) {
@@ -15,7 +15,7 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    int n;
+
     char buf[BUFFSIZE];
     int fd;
     int count=0;

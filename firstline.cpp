@@ -31,7 +31,7 @@ int main(int argc, char* argv[]) {
     while ((n = read(fd, buf, BUFFSIZE)) > 0 && count>=0) {
 
         if(buf[0]=='\n'){ //if new line character is found count is set to negative 1 so file is not read anymore
-            count=-1;
+            count=-1; //if count is negative 1 we have found a new line so we stop reading the file
             cout<<endl;
         }else{
             count++;
