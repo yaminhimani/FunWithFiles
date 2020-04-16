@@ -38,23 +38,11 @@ int main(int argc, char* argv[]) {
         }
 
 
-
-
-      //  cout << *max_element(array.begin(), array.end()) << endl;
-
-
-//        if(write(STDOUT_FILENO, buf, n) != n) {
-//            cout << "error writing" << endl;
-//        }
-        // cout << endl;
     }
     array.push_back(count);
 
- //   std::cout << "The vector elements are : ";
-
     int result=0;
     for(int i=0; i < array.size(); i++){
-    //   cout << array.at(i) << ' ';
         if(array.at(i)>result){
             result=array.at(i);
         }

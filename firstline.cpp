@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <unistd.h>
 #include <sys/types.h>
@@ -33,6 +32,7 @@ int main(int argc, char* argv[]) {
 
         if(buf[0]=='\n'){ //if new line character is found count is set to negative 1 so file is not read anymore
             count=-1;
+            cout<<endl;
         }else{
             count++;
             if ((write(STDOUT_FILENO, buf, n) != n)) {
@@ -42,5 +42,5 @@ int main(int argc, char* argv[]) {
 
 
     }
-    cout<<endl;
+
 }
